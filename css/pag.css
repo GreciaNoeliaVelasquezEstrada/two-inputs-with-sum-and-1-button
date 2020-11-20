@@ -1,0 +1,40 @@
+html{
+	font-size: 16px;
+	font-family: sans-serif, bold;
+}
+body{
+	background-color: darkkhaki;
+	background-attachment: fixed;
+	background-size: 100% 100%;
+}
+.conteiner{
+	max-width: 400px;
+	height: auto;
+	padding: 19px;
+	box-shadow: 0 0 25px 2px black;
+	text-align: center;
+	background-color: black;
+	border:10px solid rgb(233, 248, 51);
+	margin: 9% auto;
+	padding-bottom: 2rem;
+}
+.titulo{
+	font-family: serif, bold;
+	font-size: 20px;
+	font-weight: 400;
+	color: firebrick;
+	background-color: cornsilk;
+}
+.inputs{
+	font-size: 18px;
+	font-weight: 300;
+	color: azure;
+}
+.btn{
+	font-size: 18px;
+	color: cyan;
+	border-bottom: white;
+	border-bottom-color: dodgerblue;
+	border-radius: 15px;
+	text-align: right;
+}

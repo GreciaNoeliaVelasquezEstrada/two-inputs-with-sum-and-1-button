@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>gnv</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/pag.css">
+	</head>
+	<body>
+		<div class="conteiner" center>
+			<div class="titulo">
+				<h2>new challenge</h2>
+			</div>
+		<div class="inputs">
+	<form action="" name="estrada" method="get">
+		numberOne:<input type="number" name="one" id="one" maxlength="20" placeholder="number1"><br><br>
+		numberTwo:<input type="number" name="two" id="two" maxlength="20" placeholder="number2"><br><br>
+		total:<input type="number" name="tot" id="tot" maxlength="10" placeholder="total " readonly="readonly"><br><br>
+		<div class="btn">
+		<input type="submit" name="btn" value="aceptar" onclick="validar(e)">
+		</div> 
+	</form>
+		</div>
+		</div>
+	</body>
+	<script>
+	(function() {
+		var estrada=document.getElementsByName('estrada')[0],
+			elementos=document.getelements;
+		var boton= document.getElementById("btn");
+		
+		var validarNumberOne= function(e){
+			if(estrada.one.value == 0){
+				alert("complete el campo numberOne");
+				e.preventDefault();
+			}
+		}
+		var validarNumberTwo= function(e){
+			if(estrada.two.value == 0){
+				alert("complete el campo numberTwo");
+				e.preventDefault();
+			}
+		}
+	
+		var validarTotal = function(e){
+			var one=parseFloat(document.getElementById("one").value);
+			var two=parseFloat(document.getElementById("two").value);
+			var tot;
+			
+				tot=one+two;
+				document.getElementById("tot").value=tot;
+				e.preventDefault();
+			
+		}
+		
+		var validar=function(e){
+			validarNumberOne(e);
+			validarNumberTwo(e);
+			validarTotal(e);
+		}
+		document.addEventListener("submit", validar);
+		
+	})()
+	
+	</script>
+</html>
